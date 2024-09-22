@@ -1,0 +1,16 @@
+{
+  "name": "ts-convert-kitchensink",
+  "version": "1.0.0",
+  "description": "The objective of this lab assignment is to practice using the fundamentals of JavaScript that were explored in lecture.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc app.js -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.6.2"
+  }
+}

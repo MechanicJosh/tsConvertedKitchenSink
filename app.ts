@@ -1,14 +1,14 @@
 
-var myName = 'Josh';
-const states = 50;
-var result = (5 + 4);
+var myName: string = 'Josh';
+const states: number = 50;
+var result: number = (5 + 4);
 
- function sayHello(){
+ function sayHello(): void{
    alert("Hello World");
 }
 sayHello();
 
-function checkAge(name, age){
+function checkAge(name: string, age: number){
     if(age<21){
         console.log('Sorry ' + name + " you aren't old enough to view this page!")
     }
@@ -19,13 +19,18 @@ checkAge('Abby',27);
 checkAge('James',18);
 checkAge('John', 17);
 
-let myVeggies = ['brussle sprouts', 'broccoli', 'corn'];
+let myVeggies: string[] = ['brussle sprouts', 'broccoli', 'corn'];
 
 for (let i of myVeggies){
     console.log(i);
 }
 
-let pet = {
+interface petObject {
+    name: string;
+    breed: string;
+}
+
+let pet: petObject = {
     name: 'Sandy',
     breed: 'Husky'
 }
@@ -34,18 +39,25 @@ for (let i in pet){
     console.log(pet[i]);        
 }
 
-let myArray = [{name : 'Amber', age: 28},
-               {name : 'Anthony', age: 29},
-               {name : 'Sloan', age: 1},
-               {name : 'Carter', age: 5},
-               {name : 'Gary', age: 75}];
+interface IArray {
+    name: string;
+    age: number;
+}
+
+let myArray: IArray[] = [
+    {name : 'Amber', age: 28},
+    {name : 'Anthony', age: 29},
+    {name : 'Sloan', age: 1},
+    {name : 'Carter', age: 5},
+    {name : 'Gary', age: 75}
+];
 
 
-for (i=0; i < myArray.length; i++){
+for(let i=0; i < myArray.length; i++){
    checkAge(myArray[i].name, myArray[i].age);
 };
 
-function getLength(word){
+function getLength(word: string){
   var stringLength = word.length; 
   console.log(stringLength);
     if (stringLength % 2 == 0){
@@ -56,6 +68,3 @@ function getLength(word){
 }
 
 getLength('Hello World'); 
-
-
-
