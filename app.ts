@@ -8,7 +8,7 @@ var result: number = (5 + 4);
 }
 sayHello();
 
-function checkAge(name: string, age: number){
+function checkAge(name: string, age: number): void{
     if(age<21){
         console.log('Sorry ' + name + " you aren't old enough to view this page!")
     }
@@ -39,12 +39,12 @@ for (let i in pet){
     console.log(pet[i]);        
 }
 
-interface IArray {
+interface Person {
     name: string;
     age: number;
 }
 
-let myArray: IArray[] = [
+let myArray: Person[] = [
     {name : 'Amber', age: 28},
     {name : 'Anthony', age: 29},
     {name : 'Sloan', age: 1},
